@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-import pymupdf as fitz  # Utilisation du nom explicite
+import pymupdf as fitz  
 import base64
 
 app = Flask(__name__)
@@ -19,7 +19,6 @@ def extract_data():
         images_list = []
 
         for page in doc:
-            # 1. Extraction du texte
             text += page.get_text()
 
             # 2. Extraction des images
